@@ -8,7 +8,7 @@ module.exports = {
     devtool: "inline-source-map",
     entry: path.resolve(__dirname, './js/index.js'),
     output: {
-        filename: "app.[contentHash].js",
+        filename: "app.[contenthash].js",
         path: path.resolve(__dirname, "./build")
     },
     devServer: {
@@ -35,7 +35,7 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: '[name].[hash].[ext]',
+                        name: '[name].[contenthash].[ext]',
                         outputPath: 'imgs',
                         esModule: false
                     }
@@ -46,7 +46,7 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: '[name].[hash].[ext]',
+                        name: '[name].[contenthash].[ext]',
                         outputPath: 'fonts'
                     }
                 }
@@ -56,7 +56,7 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: '[name].[hash].[ext]',
+                        name: '[name].[contenthash].[ext]',
                         outputPath: 'documents',
                         esModule: false
                     }
@@ -71,6 +71,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             React: 'react',
             ReactDOM: 'react-dom'
+            // Foundation: 'foundation-sites/js/foundation.core',
         }),
         new HtmlWebpack({
             template: 'template.html'

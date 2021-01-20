@@ -1,0 +1,26 @@
+@import 'settings';
+@import '../node_modules/foundation-sites/scss/foundation';
+@include foundation-everything;
+
+
+body {
+  background-color: map-get($foundation-palette, 'primary');
+  color: $white;
+
+  .todo-item {
+    padding: 25px 15px;
+
+    input, p {
+      display: inline-block;
+      margin-left: 25px;
+    }
+  }
+
+  .loading {
+    background: linear-gradient(to bottom left, #808080, #b3b3b3);
+    width: 80%;
+    display: block;
+    min-height: 50px;
+    margin: 25px auto;
+  }
+}
